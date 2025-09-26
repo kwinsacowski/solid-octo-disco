@@ -1,0 +1,105 @@
+/* Galaxy Color Palette Variables */
+:root {
+  --deep-space: #0B0C2A;       /* Dark navy / space background */
+  --nebula-purple: #4B3F72;    /* Deep purple nebula */
+  --cosmic-pink: #D964A5;      /* Vivid pink highlights */
+  --starlight-blue: #6EC1E4;   /* Soft glowing stars */
+  --aurora-teal: #3DDAD7;      /* Shimmering cosmic teal */
+  --supernova-gold: #FFD166;   /* Star accent highlights */
+  --meteor-orange: #FF6B35;    /* Warm cosmic flare */
+  --plasma-lavender: #B084CC;  /* Faint nebula glow */
+
+  /* Font */
+  --handwriting-font: "Patrick Hand", "Comic Neue", "Shadows Into Light", cursive, system-ui, sans-serif;
+}
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--handwriting-font);
+  background: linear-gradient(160deg, var(--deep-space), var(--nebula-purple), var(--cosmic-pink));
+  color: #ECEFF1;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  line-height: 1.6;
+}
+
+/* Headings */
+h1, h2, h3, h4 {
+  color: var(--supernova-gold);
+  margin-bottom: 1rem;
+}
+
+/* Links */
+a {
+  font-weight: 500;
+  color: var(--starlight-blue);
+  text-decoration: underline dotted;
+  transition: color 0.2s;
+}
+a:hover {
+  color: var(--cosmic-pink);
+}
+
+/* Buttons */
+button {
+  border-radius: 8px;
+  border: 2px solid var(--supernova-gold);
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-family: var(--handwriting-font);
+  background-color: var(--aurora-teal);
+  color: var(--deep-space);
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 2px 2px 12px rgba(255, 255, 255, 0.3);
+}
+
+/* Lists */
+ul {
+  list-style: disc;
+  list-style-position: inside;
+  text-align: left;
+  padding-left: 0 rem;
+  margin-top: .5rem;
+  margin-bottom: .5rem;
+}
+
+/* Nested List Styling */
+ul ul {
+  list-style: none;
+  margin-left: 3.5rem;
+}
+
+/* Centering Utility */
+.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+  max-width: 800px;
+  padding: 2rem;
+}
+
+/* Responsive text */
+h1 {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+}
+li {
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+}
+
