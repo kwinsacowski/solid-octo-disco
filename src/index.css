@@ -36,7 +36,8 @@ body {
 /* Headings */
 h1, h2, h3, h4 {
   color: var(--supernova-gold);
-  margin-bottom: 1rem;
+  margin-bottom: .25rem;
+  margin-top: 2rem;
 }
 
 /* Links */
@@ -69,10 +70,10 @@ button:hover {
 
 /* Lists */
 ul {
+  display: inline-block;
   list-style: disc;
   list-style-position: inside;
   text-align: left;
-  padding-left: 0 rem;
   margin-top: .5rem;
   margin-bottom: .5rem;
 }
