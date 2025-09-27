@@ -3,7 +3,7 @@ function Ages (){
 
     return (
         <ul>
-            {ages.map ((age, index) => (<li key= {index}>{age}</li>))}
+            {ages.map ((age, index) => (<li key= {index}>{age>21 && age}</li>))}
         </ul>
     )
 }
