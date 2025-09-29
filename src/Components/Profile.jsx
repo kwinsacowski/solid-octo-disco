@@ -1,17 +1,18 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import rhysand from '../assets/rhysand.jpg'
-import Likes from './Likes'
 
-const Profile = () => {
-  const [hearts, setHearts] = useState(0)
+function Profile (){
+  const [hearts, setHearts] = useState(0);
 
-  const addHeart = () => setHearts(h => h + 1)
+  useEffect(()=>{
+   
+  },[hearts]);
 
   return (
     <div>
-    <Likes hearts={hearts} />
+      <div>{"❤️".repeat(Math.max(0, hearts))}</div>
       <h2>Rhysand</h2>
-      <img src={rhysand} alt="Rhysand" onClick={addHeart} style={{cursor: 'pointer'}} />
+      <img src={rhysand} alt="Rhysand" onClick={()=> setHearts(hearts + 1)} style={{cursor: 'pointer'}} />
       <h3>RhysandtheGreat</h3>
       <p>“High Lord of the Night Court. Lover of stars, freedom, and one very stubborn High Lady.”</p>
     </div>
